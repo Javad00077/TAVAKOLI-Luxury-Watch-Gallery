@@ -61,20 +61,73 @@
 
   <!-- ==================== MOBILE MENU ==================== -->
   <div class="mobile-menu-overlay" id="mobile-menu-overlay">
-    <div class="mobile-menu-brand">
-      <img src="assets/logo/logo.svg" alt="TAVAKOLI" style="height: 60px; width: auto;">
-    </div>
-    <ul class="mobile-menu-links">
-      <li><a href="index.html">خانه</a></li>
-      <li><a href="products.html" class="active">فروشگاه ساعت‌ها</a></li>
-      <li><a href="about.html">درباره توکلی</a></li>
-      <li><a href="blog.html">مجله ساعت‌شناسی</a></li>
-      <li><a href="contact.html">تماس و سالن‌های VIP</a></li>
-    </ul>
-    <div class="mobile-menu-footer">
-      <a href="https://wa.me/qr/3DDS2KO3LDMOC1" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
-        مشاوره و خرید در واتساپ
-      </a>
+    <div class="mobile-menu-container">
+      <div class="mobile-menu-brand">
+        <a href="index.html" class="mobile-menu-brand-link" aria-label="گالری ساعت توکلی">
+          <img src="assets/logo/logo-nav.svg" alt="TAVAKOLI" class="mobile-menu-brand-img">
+        </a>
+      </div>
+      <ul class="mobile-menu-links">
+        <li>
+          <a href="index.html">
+            <div class="menu-link-content">
+              <span class="material-symbols-outlined menu-link-icon">home</span>
+              <span>صفحه اصلی</span>
+            </div>
+            <span class="material-symbols-outlined menu-link-arrow">chevron_left</span>
+          </a>
+        </li>
+        <li>
+          <a href="products.html" class="active">
+            <div class="menu-link-content">
+              <span class="material-symbols-outlined menu-link-icon">watch</span>
+              <span>فروشگاه ساعت‌ها</span>
+            </div>
+            <span class="material-symbols-outlined menu-link-arrow">chevron_left</span>
+          </a>
+        </li>
+        <li>
+          <a href="about.html">
+            <div class="menu-link-content">
+              <span class="material-symbols-outlined menu-link-icon">history_edu</span>
+              <span>درباره توکلی</span>
+            </div>
+            <span class="material-symbols-outlined menu-link-arrow">chevron_left</span>
+          </a>
+        </li>
+        <li>
+          <a href="blog.html">
+            <div class="menu-link-content">
+              <span class="material-symbols-outlined menu-link-icon">auto_stories</span>
+              <span>مجله ساعت‌شناسی</span>
+            </div>
+            <span class="material-symbols-outlined menu-link-arrow">chevron_left</span>
+          </a>
+        </li>
+        <li>
+          <a href="contact.html">
+            <div class="menu-link-content">
+              <span class="material-symbols-outlined menu-link-icon">support_agent</span>
+              <span>سالن‌های VIP و تماس</span>
+            </div>
+            <span class="material-symbols-outlined menu-link-arrow">chevron_left</span>
+          </a>
+        </li>
+      </ul>
+      <div class="mobile-menu-footer">
+        <a href="https://wa.me/qr/3DDS2KO3LDMOC1" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
+          <span class="material-symbols-outlined" style="font-size: 20px;">chat</span>
+          <span>مشاوره و خرید در واتساپ</span>
+        </a>
+        <div class="mobile-menu-concierge-card">
+          <span>پاسخگویی مستقیم سالن مرکزی:</span>
+          <a href="tel:+982188888888">۰۲۱-۸۸۸۸۸۸۸۸</a>
+        </div>
+        <div class="mobile-menu-hours">
+          <span class="material-symbols-outlined" style="font-size: 14px; color: var(--color-champagne-gold);">schedule</span>
+          <span>ساعات پذیرش VIP: ۱۰:۰۰ الی ۲۱:۰۰</span>
+        </div>
+      </div>
     </div>
   </div>
 
