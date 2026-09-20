@@ -1,0 +1,6 @@
+{
+  "name": "TAVAKOLI — Luxury Watch Gallery",
+  "description": "گالری ساعت توکلی؛ مجموعه‌ای منتخب از ساعت‌های لوکس سوئیسی با تمرکز بر دقت، اصالت، مکانیک و تجربه آرامش‌بخش تجمل پایدار.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

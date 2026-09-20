@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TAVAKOLI | درباره ما و داستان مانوفاکتور — گالری ساعت توکلی</title>
+  <meta name="description" content="روایت خانه ساعت توکلی؛ تجلی سه نسل تبحر ساعت‌سازی سوئیس، تلفیق ظرافت‌های دست‌ساز ژنو با میراث جاودان تجمل در سکوت.">
+  <meta property="og:title" content="TAVAKOLI | درباره ما و داستان مانوفاکتور">
+  <meta property="og:description" content="روایت خانه ساعت توکلی؛ تجلی سه نسل تبحر ساعت‌سازی سوئیس، تلفیق ظرافت‌های دست‌ساز ژنو با میراث جاودان تجمل در سکوت.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/logo/logo.svg">
+
+  <link rel="icon" type="image/svg+xml" href="assets/logo/logo.svg">
+
+  <!-- Google Fonts: Vazirmatn, Cinzel & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Vazirmatn:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- GSAP & ScrollTrigger via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body class="bg-obsidian">
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header" id="main-header">
+    <div class="container">
+      <a href="index.html" class="nav-brand" aria-label="TAVAKOLI Watch Gallery Home">
+        <img src="assets/logo/logo-nav.svg" alt="TAVAKOLI WATCH GALLERY" class="nav-brand-logo">
+      </a>
+
+      <nav aria-label="ناوبری اصلی">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">خانه</a></li>
+          <li><a href="products.html" class="nav-link">فروشگاه</a></li>
+          <li><a href="about.html" class="nav-link active">درباره ما</a></li>
+          <li><a href="blog.html" class="nav-link">مجله</a></li>
+          <li><a href="contact.html" class="nav-link">تماس با ما</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="nav-icon-btn" data-action="open-search" aria-label="جستجو در ساعت‌ها">
+          <span class="material-symbols-outlined" style="font-size: 20px;">search</span>
+        </button>
+        <a href="https://wa.me/qr/3DDS2KO3LDMOC1" target="_blank" rel="noopener noreferrer" class="nav-whatsapp-btn">
+          <span class="material-symbols-outlined" style="font-size: 18px;">chat</span>
+          <span class="hidden sm:inline">مشاوره اختصاصی</span>
+        </a>
+        <button class="menu-toggle-btn" aria-label="منوی موبایل" id="mobile-menu-btn">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MOBILE MENU ==================== -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+    <div class="mobile-menu-brand">
+      <img src="assets/logo/logo.svg" alt="TAVAKOLI" style="height: 60px; width: auto;">
+    </div>
+    <ul class="mobile-menu-links">
+      <li><a href="index.html">خانه</a></li>
+      <li><a href="products.html">فروشگاه ساعت‌ها</a></li>
+      <li><a href="about.html" class="active">درباره توکلی</a></li>
+      <li><a href="blog.html">مجله ساعت‌شناسی</a></li>
+      <li><a href="contact.html">تماس و سالن‌های VIP</a></li>
+    </ul>
+    <div class="mobile-menu-footer">
+      <a href="https://wa.me/qr/3DDS2KO3LDMOC1" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
+        مشاوره و خرید در واتساپ
+      </a>
+    </div>
+  </div>
+
+  <!-- ==================== SEARCH MODAL ==================== -->
+  <div class="search-modal" id="search-modal">
+    <button class="search-close-btn" id="search-close" aria-label="بستن پنجره جستجو">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <div class="search-modal-box">
+      <div class="search-input-wrapper">
+        <input type="text" id="search-input-field" class="search-input-field" placeholder="جستجوی مدل، کالیبر، جنس قاب یا پیچیدگی..." autocomplete="off">
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== ABOUT HERO (Editorial Storytelling) ==================== -->
+  <section style="padding: 10rem 0 5rem 0; background: radial-gradient(circle at 50% 20%, rgba(198, 164, 106, 0.12) 0%, transparent 70%), #0B0B0A; border-bottom: 1px solid var(--border-subtle); position: relative;">
+    <div class="container" style="max-width: 960px; text-align: center;">
+      <div class="hero-badge" style="margin: 0 auto 1.5rem auto;">
+        <span class="material-symbols-outlined" style="font-size: 16px;">history_edu</span>
+        میراث و اصالت مانوفاکتور • SINCE 1928
+      </div>
+      <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; color: #FAF9F6; line-height: 1.3; margin-bottom: 1.5rem;">
+        داستان یک خانه ساعت؛ <br>
+        <span class="gold-gradient-text font-serif-luxury">وقتی ثانیه‌ها جاودانه می‌شوند</span>
+      </h1>
+      <p style="font-size: 1.125rem; color: var(--text-secondary); line-height: 1.9; font-weight: 300;">
+        ساعت‌سازی توکلی (TAVAKOLI) تجلی اراده‌ای سه‌نسله در پاسداشت اصالت میکرومکانیک سوئیس است. از سواحل آرام دریاچه ژنو تا سالن‌های مجلل VIP در ایران، تعهد ما بی‌کم‌وکاست خلق و گزینش شاهکارهایی است که در آن‌ها زمان نه صرفاً اندازه‌گیری، بلکه گرامی داشته می‌شود.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== THE PILLARS OF QUIET LUXURY ==================== -->
+  <section class="section-py section-luxury-glass" style="padding: 7rem 0; border-bottom: 1px solid var(--border-subtle);">
+    <div class="glass-ambient-orb orb-gold orb-sm" style="top: -60px; right: -40px;"></div>
+    <div class="glass-ambient-orb orb-platinum" style="bottom: -80px; left: -60px;"></div>
+    <div class="container" style="position: relative; z-index: 2;">
+      <div class="products-responsive-grid">
+        
+        <div class="glass-panel" style="padding: 2.25rem; border-color: var(--border-gold);">
+          <div style="width: 48px; height: 48px; border: 1px solid var(--color-champagne-gold); display: flex; align-items: center; justify-content: center; color: var(--color-champagne-gold); margin-bottom: 1.5rem;">
+            <span class="material-symbols-outlined" style="font-size: 24px;">verified</span>
+          </div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: #FAF9F6; margin-bottom: 0.75rem;">اصالت سازش‌ناپذیر</h3>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.8; font-weight: 300;">
+            تمامی ساعت‌های ارائه شده دارای سرتیفیکیت دست‌نویس کالیبر ژنو، شماره سریال یکتا و شناسنامه ثبت شده در دفتر کل خاندان ساعت‌سازان هستند.
+          </p>
+        </div>
+
+        <div class="glass-panel" style="padding: 2.25rem; border-color: var(--border-gold);">
+          <div style="width: 48px; height: 48px; border: 1px solid var(--color-champagne-gold); display: flex; align-items: center; justify-content: center; color: var(--color-champagne-gold); margin-bottom: 1.5rem;">
+            <span class="material-symbols-outlined" style="font-size: 24px;">precision_manufacturing</span>
+          </div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: #FAF9F6; margin-bottom: 0.75rem;">دقت میکرومکانیکی</h3>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.8; font-weight: 300;">
+            تنظیم دقیق در ۶ زاویه فضایی و سه دمای متغیر مطابق سخت‌گیرانه‌ترین استانداردهای موسسه رسمی سنجش کرونومتریک سوئیس (COSC).
+          </p>
+        </div>
+
+        <div class="glass-panel" style="padding: 2.25rem; border-color: var(--border-gold);">
+          <div style="width: 48px; height: 48px; border: 1px solid var(--color-champagne-gold); display: flex; align-items: center; justify-content: center; color: var(--color-champagne-gold); margin-bottom: 1.5rem;">
+            <span class="material-symbols-outlined" style="font-size: 24px;">diamond</span>
+          </div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: #FAF9F6; margin-bottom: 0.75rem;">تجمل در سکوت (Quiet Luxury)</h3>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.8; font-weight: 300;">
+            پرهیز از زرق‌وبرق‌های تصنعی؛ شکوه یک ساعت توکلی از تناسب خطوط، وقار متریال‌ها (تیتانیوم، پلاتین و طلا) و خلوص پرداخت دستی برمی‌خیزد.
+          </p>
+        </div>
+
+        <div class="glass-panel" style="padding: 2.25rem; border-color: var(--border-gold);">
+          <div style="width: 48px; height: 48px; border: 1px solid var(--color-champagne-gold); display: flex; align-items: center; justify-content: center; color: var(--color-champagne-gold); margin-bottom: 1.5rem;">
+            <span class="material-symbols-outlined" style="font-size: 24px;">shield</span>
+          </div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: #FAF9F6; margin-bottom: 0.75rem;">محرمانگی و امنیت کلکسیونرها</h3>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.8; font-weight: 300;">
+            پذیرش در سالن‌های خصوصی عایق صوت، تحویل با اسکورت امنیتی زرهی و حفاظت مطلق از هویت مراجعین تحت پروتکل رازداری بانکی سوئیس.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TIMELINE OF HOROLOGY MASTERY ==================== -->
+  <section class="section-py section-luxury-glass" style="padding: 8rem 0; border-bottom: 1px solid var(--border-subtle); position: relative;">
+    <div class="glass-ambient-orb orb-gold" style="top: 20%; right: -80px;"></div>
+    <div class="glass-ambient-orb orb-platinum" style="bottom: 15%; left: -80px;"></div>
+    <div class="container" style="max-width: 1000px; position: relative; z-index: 2;">
+      
+      <div style="text-align: center; margin-bottom: 4.5rem;">
+        <span style="font-family: 'Cinzel', serif; font-size: 0.75rem; letter-spacing: 0.25em; color: var(--color-champagne-gold); font-weight: 600; display: block; margin-bottom: 0.5rem;">
+          CENTURY OF HOROLOGICAL MASTERY
+        </span>
+        <h2 style="font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 800; color: #FAF9F6;">
+          سیر تاریخی خانه ساعت توکلی
+        </h2>
+      </div>
+
+      <!-- Timeline Stack -->
+      <div style="display: flex; flex-direction: column; gap: 3.5rem; position: relative;">
+        <!-- Vertical guide line -->
+        <div style="position: absolute; right: 28px; top: 0; bottom: 0; width: 1px; background: linear-gradient(to bottom, var(--color-champagne-gold), transparent);"></div>
+
+        <!-- Node 1: 1928 -->
+        <div class="timeline-item-responsive">
+          <div class="timeline-node-circle" style="width: 56px; height: 56px; border-radius: 50%; background: #171614; border: 2px solid var(--color-champagne-gold); display: flex; align-items: center; justify-content: center; color: var(--color-champagne-gold); font-family: 'Cinzel', serif; font-weight: 700; font-size: 0.8125rem; flex-shrink: 0; z-index: 2;">
+            1928
+          </div>
+          <div class="glass-panel timeline-content-card" style="padding: 2rem; flex-grow: 1; border-color: var(--border-gold);">
+            <span style="font-family: 'Cinzel', serif; font-size: 0.75rem; color: var(--color-champagne-gold); letter-spacing: 0.15em;">GENEVA ATELIER FOUNDATION</span>
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: #FAF9F6; margin: 0.375rem 0 0.75rem 0;">نخستین ارتباطات ساعت‌سازی ژنو و ایران</h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.8; font-weight: 300;">
+              آغاز پیوندهای کارگاهی با استادکاران کانتون ژنو، ورود ساعت‌های جیبی عتیقه با کالیبرهای پیچیده و ثبت نخستین گواهی‌های تعمیرات تخصصی کرونومتر.
+            </p>
+          </div>
+        </div>
+
+        <!-- Node 2: 1965 -->
+        <div class="timeline-item-responsive">
+          <div class="timeline-node-circle" style="width: 56px; height: 56px; border-radius: 50%; background: #171614; border: 2px solid var(--color-champagne-gold); display: flex; align-items: center; justify-content: center; color: var(--color-champagne-gold); font-family: 'Cinzel', serif; font-weight: 700; font-size: 0.8125rem; flex-shrink: 0; z-index: 2;">
+            1965
+          </div>
+          <div class="glass-panel timeline-content-card" style="padding: 2rem; flex-grow: 1;">
+            <span style="font-family: 'Cinzel', serif; font-size: 0.75rem; color: var(--color-champagne-gold); letter-spacing: 0.15em;">CHRONOMETRIC COMPLICATIONS</span>
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: #FAF9F6; margin: 0.375rem 0 0.75rem 0;">عصر کرونوگراف‌های دقیق و ناوبری</h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.8; font-weight: 300;">
+              طراحی و مونتاژ ابزارهای سنجش زمان هوانوردی با فرکانس‌های بالا و آغاز همکاری برای تجهیز خلبانان و ماجراجویان به کرونوگراف‌های ستون‌چرخ.
+            </p>
+          </div>
+        </div>
+
+        <!-- Node 3: 1998 -->
+        <div class="timeline-item-responsive">
+          <div class="timeline-node-circle" style="width: 56px; height: 56px; border-radius: 50%; background: #171614; border: 2px solid var(--color-champagne-gold); display: flex; align-items: center; justify-content: center; color: var(--color-champagne-gold); font-family: 'Cinzel', serif; font-weight: 700; font-size: 0.8125rem; flex-shrink: 0; z-index: 2;">
+            1998
+          </div>
+          <div class="glass-panel timeline-content-card" style="padding: 2rem; flex-grow: 1;">
+            <span style="font-family: 'Cinzel', serif; font-size: 0.75rem; color: var(--color-champagne-gold); letter-spacing: 0.15em;">POINÇON DE GENÈVE ACCREDITATION</span>
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: #FAF9F6; margin: 0.375rem 0 0.75rem 0;">احراز استانداردهای مهر رسمی ژنو</h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.8; font-weight: 300;">
+              انطباق کارگاهی با دستورالعمل‌های ۱۲‌گانه نشان تاریخی ژنو شامل پخ‌زنی دستی، خطوط کوت دو ژنو و ساخت کالیبرهای اختصاصی لیمیتد.
+            </p>
+          </div>
+        </div>
+
+        <!-- Node 4: 2026 -->
+        <div class="timeline-item-responsive">
+          <div class="timeline-node-circle" style="width: 56px; height: 56px; border-radius: 50%; background: var(--color-champagne-gold); color: #0B0B0A; display: flex; align-items: center; justify-content: center; font-family: 'Cinzel', serif; font-weight: 800; font-size: 0.8125rem; flex-shrink: 0; z-index: 2; box-shadow: var(--shadow-gold);">
+            NOW
+          </div>
+          <div class="glass-panel timeline-content-card" style="padding: 2rem; flex-grow: 1; border-color: var(--color-champagne-gold); background: rgba(198, 164, 106, 0.06);">
+            <span style="font-family: 'Cinzel', serif; font-size: 0.75rem; color: var(--color-champagne-gold); letter-spacing: 0.15em;">THE MODERN ERA OF TAVAKOLI</span>
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: #FAF9F6; margin: 0.375rem 0 0.75rem 0;">سالن‌های انحصاری و خدمات کانسیرژ</h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.8; font-weight: 300;">
+              توسعه شبکه بوتیک‌های اختصاصی در ژنو و نجف‌آباد (میدان باغ ملی)، ارائه مستقیم ساعت‌های دست‌ساز و راه‌اندازی میز مشاوره شخصی‌سازی کالیبر (Bespoke).
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== ATELIER CRAFTSMEN SHOWCASE ==================== -->
+  <section class="section-py" style="padding: 8rem 0; background-color: #121316; border-bottom: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="craftsmanship-grid">
+        
+        <div class="craftsmanship-col-visual">
+          <div class="glass-panel" style="padding: 1rem; border-color: var(--border-gold); overflow: hidden;">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGQmCxs7NNVasVkNul9-lVeYittZ0G40HjqmlSfGx237XELw5sODrn50An0Wr4aehDQK8I2X0-hP2czwGqxco3-iHJf_pJS5Ro0vWBFXtM1bftXLflCOe8rIqffVoVdKbhCwYhXiWaGDpMCQH3_uFlZSyX5sfd3szpRFpax6QErz3wcDBEtjp0y87DVk2Rrrk8KIShUo4izX5dwYjq8c3bSel4vgwnSxiDqx_tyDgCTBWDv01E3ylz2A" alt="استاد ساعت‌ساز در حال رگلاژ کرونوگراف توکلی" style="width: 100%; height: 420px; object-fit: cover;">
+          </div>
+        </div>
+
+        <div class="craftsmanship-col-narrative text-right">
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;">
+            <span style="width: 32px; height: 1px; background-color: var(--color-champagne-gold);"></span>
+            <span style="font-family: 'Cinzel', serif; font-size: 0.75rem; letter-spacing: 0.2em; color: var(--color-champagne-gold); font-weight: 600;">
+              MEET THE MASTER ATELIER
+            </span>
+          </div>
+
+          <h2 style="font-size: clamp(2rem, 3.2vw, 2.75rem); font-weight: 800; line-height: 1.35; color: #FAF9F6; margin-bottom: 1.5rem;">
+            گفتگو با استادکاران؛ <br>
+            <span class="gold-gradient-text font-serif-luxury">بدون واسطه، در کمال احترام</span>
+          </h2>
+
+          <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.9; font-weight: 300; margin-bottom: 2rem;">
+            در دیدارهای اختصاصی سالن‌های توکلی، خریدار گرامی می‌تواند مستقیماً با اعضای ارشد فنی و مهندسان کالیبر گفتگو کرده، ویژگی‌های میکرومتری موتور ساعت را بررسی کند و شناسنامه قطعه را دریافت نماید.
+          </p>
+
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="https://wa.me/qr/3DDS2KO3LDMOC1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              رزرو وقت با استاد ساعت‌ساز
+            </a>
+            <a href="products.html" class="btn btn-outline">
+              مشاهده محصولات
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="assets/logo/logo.svg" alt="TAVAKOLI WATCH GALLERY" class="footer-brand-crest">
+          <p style="font-size: 0.8125rem; line-height: 1.8; color: var(--text-secondary); max-width: 340px; margin-bottom: 1.5rem;">
+            گالری ساعت توکلی؛ تجمل در سکوت، دقت میکرومکانیک و مهندسی اصیل ساعت‌های فاخر سوئیسی.
+          </p>
+          <div style="font-family: 'Cinzel', serif; font-size: 0.75rem; color: var(--color-champagne-gold); letter-spacing: 0.15em;">
+            TIME, REFINED.
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">ناوبری گالری</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html">صفحه اصلی</a></li>
+            <li><a href="products.html">فروشگاه ساعت‌ها</a></li>
+            <li><a href="about.html">درباره ما و اصالت</a></li>
+            <li><a href="blog.html">مجله تخصصی</a></li>
+            <li><a href="contact.html">تماس و سالن‌ها</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">خدمات و اصالت</h4>
+          <ul class="footer-nav-list">
+            <li><a href="products.html">استعلام موجودی کالیبرها</a></li>
+            <li><a href="about.html">نشان کیفیت ژنو (Poinçon)</a></li>
+            <li><a href="contact.html">رزرو وقت ملاقات VIP</a></li>
+            <li><a href="https://wa.me/qr/3DDS2KO3LDMOC1" target="_blank" rel="noopener noreferrer">مشاوره در واتساپ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">سالن‌های حضوری</h4>
+          <p style="font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem;">
+            <strong style="color: #FAF9F6; display: block;">سالن مرکزی ایران:</strong>
+            اصفهان، نجف‌آباد، میدان باغ ملی، سالن اختصاصی توکلی
+          </p>
+          <p style="font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem;">
+            <strong style="color: #FAF9F6; display: block;">دفتر مرکزی ژنو:</strong>
+            Rue du Rhône 42, 1204 Genève, Suisse
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          © ۲۰۲۶ تمامی حقوق مادی و معنوی برای برند رسمی <strong>TAVAKOLI</strong> محفوظ است.
+        </div>
+        <div style="display: flex; gap: 1.5rem; font-family: 'Cinzel', serif; letter-spacing: 0.1em;">
+          <span>SWISS PRECISION</span>
+          <span>•</span>
+          <span>HAUTE HORLOGERIE</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp (Ultra-Luxury Horological Capsule) -->
+  <a href="https://wa.me/qr/3DDS2KO3LDMOC1" target="_blank" rel="noopener noreferrer" class="whatsapp-floating" aria-label="مشاوره مستقیم در واتساپ" title="مشاوره اختصاصی در واتساپ">
+    <div class="whatsapp-text-group">
+      <span class="whatsapp-primary-text">مشاوره و استعلام در واتساپ</span>
+      <span class="whatsapp-sub-status">
+        <span class="whatsapp-live-dot"></span>
+        پاسخ‌گویی آنی VIP
+      </span>
+    </div>
+    <div class="whatsapp-icon-orb">
+      <div class="whatsapp-pulse-ring"></div>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zM12.05 3.67c4.54 0 8.24 3.7 8.24 8.24 0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24zm4.52 11.66c-.25-.12-1.47-.72-1.7-.8-.23-.09-.39-.12-.56.12-.17.25-.65.8-.8 1-.15.15-.3.17-.55.05-.25-.12-1.05-.39-2-1.24-.74-.66-1.24-1.47-1.39-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.32-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.16 0-.43.06-.66.31-.22.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.57.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.53.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.3z"/>
+      </svg>
+    </div>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

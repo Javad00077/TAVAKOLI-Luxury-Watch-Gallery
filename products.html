@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TAVAKOLI | کاتالوگ انحصاری ساعت‌ها — گالری ساعت توکلی</title>
+  <meta name="description" content="کاتالوگ ساعت‌های لوکس توکلی؛ مجموعه‌ای منتخب از ساعت‌های مکانیکی، توربیون، کرونوگراف و اسکلتون با استانداردهای سوئیس.">
+  <meta property="og:title" content="TAVAKOLI | کاتالوگ انحصاری ساعت‌ها">
+  <meta property="og:description" content="کاتالوگ ساعت‌های لوکس توکلی؛ مجموعه‌ای منتخب از ساعت‌های مکانیکی، توربیون، کرونوگراف و اسکلتون با استانداردهای سوئیس.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/logo/logo.svg">
+
+  <link rel="icon" type="image/svg+xml" href="assets/logo/logo.svg">
+
+  <!-- Google Fonts: Vazirmatn, Cinzel & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Vazirmatn:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- GSAP & ScrollTrigger via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body class="bg-obsidian">
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header" id="main-header">
+    <div class="container">
+      <a href="index.html" class="nav-brand" aria-label="TAVAKOLI Watch Gallery Home">
+        <img src="assets/logo/logo-nav.svg" alt="TAVAKOLI WATCH GALLERY" class="nav-brand-logo">
+      </a>
+
+      <nav aria-label="ناوبری اصلی">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">خانه</a></li>
+          <li><a href="products.html" class="nav-link active">فروشگاه</a></li>
+          <li><a href="about.html" class="nav-link">درباره ما</a></li>
+          <li><a href="blog.html" class="nav-link">مجله</a></li>
+          <li><a href="contact.html" class="nav-link">تماس با ما</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="nav-icon-btn" data-action="open-search" aria-label="جستجو در ساعت‌ها">
+          <span class="material-symbols-outlined" style="font-size: 20px;">search</span>
+        </button>
+        <a href="https://wa.me/qr/3DDS2KO3LDMOC1" target="_blank" rel="noopener noreferrer" class="nav-whatsapp-btn">
+          <span class="material-symbols-outlined" style="font-size: 18px;">chat</span>
+          <span class="hidden sm:inline">مشاوره اختصاصی</span>
+        </a>
+        <button class="menu-toggle-btn" aria-label="منوی موبایل" id="mobile-menu-btn">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MOBILE MENU ==================== -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+    <div class="mobile-menu-brand">
+      <img src="assets/logo/logo.svg" alt="TAVAKOLI" style="height: 60px; width: auto;">
+    </div>
+    <ul class="mobile-menu-links">
+      <li><a href="index.html">خانه</a></li>
+      <li><a href="products.html" class="active">فروشگاه ساعت‌ها</a></li>
+      <li><a href="about.html">درباره توکلی</a></li>
+      <li><a href="blog.html">مجله ساعت‌شناسی</a></li>
+      <li><a href="contact.html">تماس و سالن‌های VIP</a></li>
+    </ul>
+    <div class="mobile-menu-footer">
+      <a href="https://wa.me/qr/3DDS2KO3LDMOC1" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
+        مشاوره و خرید در واتساپ
+      </a>
+    </div>
+  </div>
+
+  <!-- ==================== SEARCH MODAL ==================== -->
+  <div class="search-modal" id="search-modal">
+    <button class="search-close-btn" id="search-close" aria-label="بستن پنجره جستجو">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <div class="search-modal-box">
+      <div class="search-input-wrapper">
+        <input type="text" id="search-input-field" class="search-input-field" placeholder="جستجوی مدل، کالیبر، جنس قاب یا پیچیدگی..." autocomplete="off">
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE HERO BANNER ==================== -->
+  <section style="padding: 9rem 0 3.5rem 0; background: radial-gradient(circle at 70% 30%, rgba(198, 164, 106, 0.08) 0%, transparent 60%), #0B0B0A; border-bottom: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div style="display: flex; flex-direction: column; gap: 0.75rem; max-width: 800px;">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <span style="width: 28px; height: 1px; background-color: var(--color-champagne-gold);"></span>
+          <span style="font-family: 'Cinzel', serif; font-size: 0.75rem; letter-spacing: 0.25em; color: var(--color-champagne-gold); font-weight: 600;">
+            THE TAVAKOLI COLLECTION • 2026
+          </span>
+        </div>
+        <h1 style="font-size: clamp(2.25rem, 4vw, 3.5rem); font-weight: 800; color: #FAF9F6; line-height: 1.3;">
+          کاتالوگ انحصاری <span class="gold-gradient-text font-serif-luxury">ساعت‌های فاخر</span>
+        </h1>
+        <p style="font-size: 1.0625rem; color: var(--text-secondary); line-height: 1.8; font-weight: 300;">
+          هر ساعت نمادی از دقت میکرومکانیک، پرداخت دستی و آرامش تجمل پایدار است. با ضمانت رسمی اصالت سوئیس و خدمات تحویل اختصاصی با اسکورت در سراسر کشور.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FILTER & SEARCH TOOLBAR ==================== -->
+  <section style="position: sticky; top: var(--header-height); z-index: 40; background: rgba(15, 15, 14, 0.94); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border-subtle); padding: 1rem 0;">
+    <div class="container">
+      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;">
+        
+        <!-- Category Filter Buttons -->
+        <div style="display: flex; align-items: center; gap: 0.5rem; overflow-x: auto; padding-bottom: 0.25rem;">
+          <button class="btn btn-primary btn-sm active" data-filter-category="all">
+            تمامی ساعت‌ها
+          </button>
+          <button class="btn btn-outline btn-sm" data-filter-category="tourbillon">
+            توربیون (Tourbillon)
+          </button>
+          <button class="btn btn-outline btn-sm" data-filter-category="chronograph">
+            کرونوگراف (Chronograph)
+          </button>
+          <button class="btn btn-outline btn-sm" data-filter-category="classic">
+            کلاسیک طلا (Classic Gold)
+          </button>
+          <button class="btn btn-outline btn-sm" data-filter-category="skeleton">
+            اسکلتون (Skeleton)
+          </button>
+          <button class="btn btn-outline btn-sm" data-filter-category="aviation">
+            هوانوردی (Aviation)
+          </button>
+        </div>
+
+        <!-- Search & Sorting Input -->
+        <div style="display: flex; align-items: center; gap: 1rem; flex-grow: 1; justify-content: flex-end; max-width: 480px;">
+          <div style="position: relative; width: 100%; max-width: 260px;">
+            <input type="text" id="product-search-input" placeholder="جستجوی مدل یا کالیبر..." style="width: 100%; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-subtle); padding: 0.5rem 2.25rem 0.5rem 0.75rem; font-size: 0.8125rem; color: #FAF9F6; outline: none; border-radius: 2px;">
+            <span class="material-symbols-outlined" style="position: absolute; right: 0.625rem; top: 50%; transform: translateY(-50%); font-size: 16px; color: var(--text-muted);">search</span>
+          </div>
+
+          <select id="product-sort-select" style="background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-subtle); padding: 0.5rem 1rem; font-size: 0.8125rem; color: #FAF9F6; outline: none; cursor: pointer; border-radius: 2px;">
+            <option value="featured">مرتب‌سازی: برگزیده</option>
+            <option value="price-desc">قیمت: زیاد به کم</option>
+            <option value="price-asc">قیمت: کم به زیاد</option>
+          </select>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PRODUCTS CATALOG GRID (12 Luxury Timepieces) ==================== -->
+  <section class="section-luxury-glass" style="padding: 4rem 0 7rem 0;">
+    <div class="glass-ambient-orb orb-gold" style="top: 5%; right: -80px;"></div>
+    <div class="glass-ambient-orb orb-platinum" style="top: 45%; left: -90px;"></div>
+    <div class="glass-ambient-orb orb-gold orb-sm" style="bottom: 10%; right: -60px;"></div>
+    <div class="container" style="position: relative; z-index: 2;">
+      
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; font-size: 0.8125rem; color: var(--text-muted);">
+        <span>نمایش <strong id="products-count-display" style="color: var(--color-champagne-gold);">۱۲</strong> شاهکار مکانیکی منتخب</span>
+        <span>تحویل با اسکورت اختصاصی و شناسنامه بین‌المللی</span>
+      </div>
+
+      <div id="products-grid-container" class="products-responsive-grid">
+        
+        <!-- 1. Chronograph Titanium Black (IMAGE_29) -->
+        <article class="watch-card product-grid-card" data-category="chronograph" data-price="24800">
+          <div class="watch-card-image-wrap">
+            <span class="watch-card-badge" style="background: var(--color-champagne-gold); color: #0B0B0A;">سری پرچمدار</span>
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDORCHh3eSciY1yWbtS7wKedQ6fy50wgkcDe6cQJOOAumO6ETf66sdzpdUtbSsS8tLHMXbB3YyKRcU_h-GNynRcHnpX2Jcv3j-rWNqj6Q5SE2MNauojxJsDWkLzXntpsLo29GH1p9QS6LHXttpvlshA-gCNcM1HrYQOJaArSTnWAB4nbVrUPZuqYPUZwqYLYlZxUg69HcVJ1eaBc2iCF0IiHLNdZy1f0zq-sKJKWpS4KskBf4dNXppo3XKEjsn25YtfGN0" alt="کرونوگراف تیتانیوم سیاه توکلی" class="watch-card-img" loading="lazy">
+          </div>
+          <div class="watch-card-info">
+            <div>
+              <div class="watch-card-meta-top">
+                <span>لیمیتد ۲۵ نسخه</span>
+                <span style="font-family: 'Cinzel', serif; color: var(--color-champagne-gold);">Calibre TK-37</span>
+              </div>
+              <h3 class="watch-card-title">کرونوگراف تیتانیوم سیاه</h3>
+              <p class="watch-card-desc">پوشش سرامیک DLC مشکی مات، دکمه‌های طلای ۱۸ عیار شیاردار، ستون‌چرخ کرونوگراف با ضربان ۳۶,۰۰۰ فرکانس.</p>
+              <div class="watch-card-specs-grid">
+                <div class="watch-card-spec-item">
+                  <span>قطر / جنس قاب:</span>
+                  <span>۴۳mm • تیتانیوم گرید ۵</span>
+                </div>
+                <div class="watch-card-spec-item">
+                  <span>نوع موتور / آب:</span>
+                  <span>اتوماتیک Hi-Beat • 100M</span>
+                </div>
+              </div>
+            </div>
+            <div class="watch-card-footer">
+              <div class="watch-card-price">$24,800</div>
+              <a href="https://wa.me/qr/3DDS2KO3LDMOC1" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" data-whatsapp-inquiry="کرونوگراف تیتانیوم سیاه">
+                سفارش این محصول
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Heritage Imperial 1928 (IMAGE_28) -->
+        <article class="watch-card product-grid-card" data-category="classic" data-price="18400">
+          <div class="watch-card-image-wrap">
+            <span class="watch-card-badge">طلای ۱۸ عیار</span>
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj7eM9jCWokRXVUYadnT3lCetFkum3ikoSXVC4uTNAcHt2q8jAMtfquBRVq2n-CFoqC-rWowN08LZjokdu6xwm4Npo-0GC2xOZPUWmL7QSAL-Hy5oZR2m_-hr-556botyPOxPilMo8WNRycxdXywLpIwLeAk3rxe41lApodFIIQ4tv-wSNjQ1MsT3NroDs0K1ixPYyo6TzqKbBw0K2g3RHS3fa_6JJbyLsPBY64xkJqH4n9_4tQL180HkiFxl0gByJT44" alt="توکلی هریتیج ایمپریال ۱۹۲۸" class="watch-card-img" loading="lazy">
+          </div>
+          <div class="watch-card-info">
+            <div>
+              <div class="watch-card-meta-top">
+                <span>شماره ۰۸ از ۵۰</span>
+                <span style="font-family: 'Cinzel', serif; color: var(--color-champagne-gold);">Calibre 1928</span>
+              </div>
+              <h3 class="watch-card-title">توکلی هریتیج ایمپریال ۱۹۲۸</h3>
+              <p class="watch-card-desc">صفحه میناکاری گراند-فو سفید، لولاهای آرت دکو، عقربه‌های طلای سرخ و بدنه دست‌تراش از شمش طلای ۱۸ عیار زرد.</p>
+              <div class="watch-card-specs-grid">
+                <div class="watch-card-spec-item">
+                  <span>قطر / جنس قاب:</span>
+                  <span>۴۰mm • طلای ۱۸ عیار 4N</span>
+                </div>
+                <div class="watch-card-spec-item">
+                  <span>نوع موتور / آب:</span>
+                  <span>کوک دستی • 50M</span>
+                </div>
+              </div>
+            </div>
+            <div class="watch-card-footer">
+              <div class="watch-card-price">$18,400</div>
+              <a href="https://wa.me/qr/3DDS2KO3LDMOC1" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" data-whatsapp-inquiry="توکلی هریتیج ایمپریال ۱۹۲۸">
+                سفارش این محصول
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Flying Tourbillon Rose Gold (IMAGE_33) -->
+        <article class="watch-card product-grid-card" data-category="tourbillon" data-price="38900">
+          <div class="watch-card-image-wrap">
+            <span class="watch-card-badge" style="background: var(--color-champagne-gold); color: #0B0B0A;">گراند کامپلیکیشن</span>
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3pXvLrfOOWMbDDajExTuMX6qn3yCsYeUT00cepx1V2XVONmkfMvFZQfZTaNWnQId80P72ywMH2KhZqc4GeFBavNqE3jnCdyKJVJKHxSDwZkFg_bOaHaPJsHHcntlbJCPcjzmq7YR_xPYxJi4C6YKSTvJdUjkaflgpSk-Zr1g_AXXu0ErS9xKHNN7QwjHoPcVSHii8frAW1SLsOonrZrtrZ8QZrfP2x2S1ZjkCgSgr_EaU1xA6Mn2cBQ" alt="توربیون پرنده رویال رزگلد" class="watch-card-img" loading="lazy">
+          </div>
+          <div class="watch-card-info">
+            <div>
+              <div class="watch-card-meta-top">
+                <span>تولید سالانه ۵ نسخه</span>
+                <span style="font-family: 'Cinzel', serif; color: var(--color-champagne-gold);">Calibre TK-01</span>
+              </div>
+              <h3 class="watch-card-title">توربیون پرنده رویال رزگلد</h3>
+              <p class="watch-card-desc">قفسه توربیون چرخان ۶۰ ثانیه‌ای در موقعیت ساعت ۶، پل‌های صیقلی دست‌ساز، ذخیره انرژی ۷۲ ساعت و بدنه رزگلد 5N.</p>
+              <div class="watch-card-specs-grid">
+                <div class="watch-card-spec-item">
+                  <span>قطر / جنس قاب:</span>
+                  <span>۴۲mm • رزگلد ۱۸ عیار</span>
+                </div>
+                <div class="watch-card-spec-item">
+                  <span>نوع موتور / آب:</span>
+                  <span>کوک دستی توربیون • 30M</span>
+                </div>
+              </div>
+            </div>
+            <div class="watch-card-footer">
+              <div class="watch-card-price">$38,900</div>
+              <a href="https://wa.me/qr/3DDS2KO3LDMOC1" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" data-whatsapp-inquiry="توربیون پرنده رویال رزگلد">
+                دریافت مشاوره
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Ultra Thin Skeleton (IMAGE_23) -->
+        <article class="watch-card product-grid-card" data-category="skeleton" data-price="27500">
+          <div class="watch-card-image-wrap">
+            <span class="watch-card-badge">اسکلتون فوق باریک</span>
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm2EwrJlZjYw6vASSZJ2LyX9V118xQtN9EjBAZ5uW0CAK3a4D0nYtU6OWNJXwKEAOCmY0XJqzNhfjAAm7slDoiPz0iH3d-waZ_2WhLFcEZ5Zf22o5lgd4qjGHmPgo-Be1TypE-0h0oMVi4L5uoODotM3OSZPbRd2MvHoJIoR0p24YhkXU7Cv2vaYAV7_W67vEEtBCSWvXmutQ1q2m3gi-4Ywpkd08gBpc5DDL0BbENRcT4c7E0M9YeQKhm_zAz9bvyL8c" alt="اسکلتون فوق باریک توکلی" class="watch-card-img" loading="lazy">
+          </div>
+          <div class="watch-card-info">
+            <div>
+              <div class="watch-card-meta-top">
+                <span>ضخامت ۵.۴ میلی‌متر</span>
+                <span style="font-family: 'Cinzel', serif; color: var(--color-champagne-gold);">Calibre Skeleton</span>
+              </div>
+              <h3 class="watch-card-title">اسکلتون فوق باریک توکلی</h3>
+              <p class="watch-card-desc">پل‌های قلم‌زنی‌شده با دست، نمایش بی‌مانع رقاصک و چرخ‌دنده‌های طلایی با عقربه‌های استیل آب‌دیده آبی بلود.</p>
+              <div class="watch-card-specs-grid">
+                <div class="watch-card-spec-item">
+                  <span>قطر / ضخامت:</span>
+                  <span>۳۹.۵mm • ضخامت ۵.۴mm</span>
+                </div>
+                <div class="watch-card-spec-item">
+                  <span>جنس بدنه / شیشه:</span>
+                  <span>پلاتین 950 • سفیر دوبل</span>
+                </div>
+              </div>
+            </div>
+            <div class="watch-card-footer">
+              <div class="watch-card-price">$27,500</div>
+              <a href="https://wa.me/qr/3DDS2KO3LDMOC1" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" data-whatsapp-inquiry="اسکلتون فوق باریک توکلی">
+                استعلام موجودی
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. Aviator Navitimer Steel (IMAGE_30) -->
+        <article class="watch-card product-grid-card" data-category="aviation chronograph" data-price="15200">
+          <div class="watch-card-image-wrap">
+            <span class="watch-card-badge">سری هوانوردی ناوبری</span>
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTHzJ2sT_5LSGyUuAGlzfVAt0gaOslocRI-9vrq8_qW8PtpOFPlk1F2pWIzuk6ZqIw6oA9zQ6D_5IPrPg06yYojtng1adJVOe842g4ciYUEqoyrjbaovtVzYtTKIXMJNZD-SloZr7iRuGa4C0Go-IvcmTEgNz3BEyAs9HQDeXPGTHATXz9Bt8PdqPDCAFTCxTlbzKtZeUhhlsN1WwknX6GCXcxZ-1s3pJavqrSIByIgCZHsHd9ytxRumzuSNqF4blPtmo" alt="اویتور ناوی‌تایمر استیل" class="watch-card-img" loading="lazy">
+          </div>
+          <div class="watch-card-info">
+            <div>
+              <div class="watch-card-meta-top">
+                <span>خط‌کش محاسباتی دایره‌ای</span>
+                <span style="font-family: 'Cinzel', serif; color: var(--color-champagne-gold);">Calibre TK-44</span>
+              </div>
+              <h3 class="watch-card-title">اویتور ناوی‌تایمر استیل</h3>
+              <p class="watch-card-desc">کرونوگراف فلای‌بک حرفه‌ای هوانوردی، بند هفت‌ردیفه استیل ضدحساسیت و شب‌نمای با ماندگاری بالا سوپرلومینووا.</p>
+              <div class="watch-card-specs-grid">
+                <div class="watch-card-spec-item">
+                  <span>قطر / جنس قاب:</span>
+                  <span>۴۱.۵mm • استیل 316L</span>
+                </div>
+                <div class="watch-card-spec-item">
+                  <span>نوع موتور / آب:</span>
+                  <span>اتوماتیک کالیبر ۹۱۰ • 100M</span>
+                </div>
+              </div>
+            </div>
+            <div class="watch-card-footer">
+              <div class="watch-card-price">$15,200</div>
+              <a href="https://wa.me/qr/3DDS2KO3LDMOC1" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" data-whatsapp-inquiry="اویتور ناوی‌تایمر استیل">
+                سفارش این محصول
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6. Manhattan Explorer Submarine (IMAGE_21) -->
+        <article class="watch-card product-grid-card" data-category="classic" data-price="14600">
+          <div class="watch-card-image-wrap">
+            <span class="watch-card-badge">غواصی حرفه‌ای</span>
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHQBXXM0NLitYsgMaLIKK5xiygkhY9ViQw3WyBmvo9Ppvs5I__ZiQdgee3dNQPusv-V8ospfd5dzkjneHxzX-mkhSjlg-Yqyt2AOoIzKUqC4KOccfckLIvK7Ov8Z_gzwypkPwnae5sWj2EMKjJ2ljr6Lk70nnf_toG96oCJp1bAVXZFMbMWkDMVvykb825jxUsk1AtKZSMgp9wx7-DTZA9ZiFz7-V28d8YXblWYoR47W_vfkvW3nuqU7i7KYFaZrpPArw" alt="منهتن اکسپلورر دایور" class="watch-card-img" loading="lazy">
+          </div>
+          <div class="watch-card-info">
+            <div>
+              <div class="watch-card-meta-top">
+                <span>تاییدیه ۳۰۰ متر</span>
+                <span style="font-family: 'Cinzel', serif; color: var(--color-champagne-gold);">Calibre 3130</span>
+              </div>
+              <h3 class="watch-card-title">منهتن اکسپلورر دایور</h3>
+              <p class="watch-card-desc">بزل سرامیک مشکی یک‌طرفه چرخان با درجه‌بندی لیزری، سوپاپ خروج هلیوم اتوماتیک و قفل دوتایی ایمن غواصی.</p>
+              <div class="watch-card-specs-grid">
+                <div class="watch-card-spec-item">
+                  <span>قطر / جنس قاب:</span>
+                  <span>۴۰mm • فولاد 904L ضدزنگ</span>
+                </div>
+                <div class="watch-card-spec-item">
+                  <span>نوع موتور / آب:</span>
+                  <span>اتوماتیک COSC • 300M</span>
+                </div>
+              </div>
+            </div>
+            <div class="watch-card-footer">
+              <div class="watch-card-price">$14,600</div>
+              <a href="https://wa.me/qr/3DDS2KO3LDMOC1" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" data-whatsapp-inquiry="منهتن اکسپلورر دایور">
+                استعلام موجودی
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 7. Chrono Tiger Maximum Double Digit (IMAGE_22) -->
+        <article class="watch-card product-grid-card" data-category="chronograph" data-price="22800">
+          <div class="watch-card-image-wrap">
+            <span class="watch-card-badge">مسابقه‌ای دبل دیجیت</span>
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv611AW2EGIBRerMmNHpj46vBRr5WPomufWiWc5lBv22DNbvqkv4T77DA4AwkSilWUfZkqVrVwUSUcFdMniNW7B3332UGAmN7MsP8PfZmHtXtolNheMR6aFlUFm9AvURh-7aN_VlS4BVl6INw4y3ihqpwyLV07_09UHZjXlHd3qS4OyZyCH_SxqgUHGRv7-9k6T8iH6FuhYxyGKd8PmYAD7dpfYHHd3BURZ9sA41DQnUBKzLWFgi6LQIESdJEF7Sxr4DY" alt="کرونو تایگر مکسیموم" class="watch-card-img" loading="lazy">
+          </div>
+          <div class="watch-card-info">
+            <div>
+              <div class="watch-card-meta-top">
+                <span>سرعت‌سنج تاکیمتر</span>
+                <span style="font-family: 'Cinzel', serif; color: var(--color-champagne-gold);">Calibre TK-77</span>
+              </div>
+              <h3 class="watch-card-title">کرونو تایگر مکسیموم دبل</h3>
+              <p class="watch-card-desc">کرونوگراف فلای‌بک با بزل تاکیمتر ۵۰۰ کیلومتر، نشانگر تقویم سریع و سیستم ضدضربه اختصاصی پاراشاک.</p>
+              <div class="watch-card-specs-grid">
+                <div class="watch-card-spec-item">
+                  <span>قطر / جنس قاب:</span>
+                  <span>۴۳mm • تیتانیوم DLC</span>
+                </div>
+                <div class="watch-card-spec-item">
+                  <span>نوع موتور / آب:</span>
+                  <span>اتوماتیک ۵ هرتز • 100M</span>
+                </div>
+              </div>
+            </div>
+            <div class="watch-card-footer">
+              <div class="watch-card-price">$22,800</div>
+              <a href="https://wa.me/qr/3DDS2KO3LDMOC1" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" data-whatsapp-inquiry="کرونو تایگر مکسیموم دبل">
+                سفارش این محصول
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 8. Astronomia Perpetual Calendar Moonphase (IMAGE_34) -->
+        <article class="watch-card product-grid-card" data-category="tourbillon classic" data-price="42500">
+          <div class="watch-card-image-wrap">
+            <span class="watch-card-badge" style="background: var(--color-champagne-gold); color: #0B0B0A;">تقویم نجومی دائمی</span>
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6_RiGrG492IiB0Bq3OumBHfxek4s7giTZ5j6DqQydoBRvF8hRonWDfVCHp51KEtpryqkpEXVi2ipbLk8MLR4-AWMHbvZ5p4d94QGi9ql74odqLY3HRS-sgabtt9Lp4CgaeRnYAohm7cFQmoqqmefDOykyYV7euqgx9G97h3J7jW-wvCO3zoJuF3TFhGHNIIQEjIGJmvnBt4BXBZ4_wINb5kGa9K2xopkhfb3RwstxCIcQf91XaS4EBg" alt="استرونومیا تقویم دائمی پلاتین" class="watch-card-img" loading="lazy">
+          </div>
+          <div class="watch-card-info">
+            <div>
+              <div class="watch-card-meta-top">
+                <span>سنگ اونتورین شبانه</span>
+                <span style="font-family: 'Cinzel', serif; color: var(--color-champagne-gold);">Calibre Moonphase</span>
+              </div>
+              <h3 class="watch-card-title">استرونومیا تقویم دائمی پلاتین</h3>
+              <p class="watch-card-desc">صفحه سنگ اونتورین با ستاره‌های طلایی، نمایش فاز ماه ۱۲۲ ساله، تقویم دائم روز، ماه و سال کبیسه در پلاتین خالص.</p>
+              <div class="watch-card-specs-grid">
+                <div class="watch-card-spec-item">
+                  <span>قطر / جنس بدنه:</span>
+                  <span>۴۲.۵mm • پلاتین 950Pt</span>
+                </div>
+                <div class="watch-card-spec-item">
+                  <span>نوع موتور / آب:</span>
+                  <span>اتوماتیک گراند کامپلیکیشن • 50M</span>
+                </div>
+              </div>
+            </div>
+            <div class="watch-card-footer">
+              <div class="watch-card-price">$42,500</div>
+              <a href="https://wa.me/qr/3DDS2KO3LDMOC1" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" data-whatsapp-inquiry="استرونومیا تقویم دائمی پلاتین">
+                دریافت مشاوره
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 9. Vintage Cushion Chronograph (IMAGE_31) -->
+        <article class="watch-card product-grid-card" data-category="classic chronograph" data-price="21600">
+          <div class="watch-card-image-wrap">
+            <span class="watch-card-badge">وینتیج کوسن ۱۹۲۸</span>
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtDrrBTjNeM47JMxX5vqVEE9JQKjAw4hupdw_gihWOuxGM5N15E8ZkWB4fCrjyJXIEauC8vB2YHGb_AOzRZ2dnY1Lh01TQiqn--hHJNw5xUjVmG2bw5TtBhzPvrnpp21W6OlVA7SFWBWBnZEZEp1snuWxrluv0LtqkoGlOygf4y_tszMJj9nAOuofWFfVJgzHDkOmAloGNdUJChgqC7DyfP7LdZIAHZOfLUslLOL8shDs_IuDvZSuZfA" alt="کرونوگراف کوسن وینتیج طلایی" class="watch-card-img" loading="lazy">
+          </div>
+          <div class="watch-card-info">
+            <div>
+              <div class="watch-card-meta-top">
+                <span>بند تمساح دست‌دوز</span>
+                <span style="font-family: 'Cinzel', serif; color: var(--color-champagne-gold);">Calibre TK-Cushion</span>
+              </div>
+              <h3 class="watch-card-title">کرونوگراف کوسن وینتیج طلایی</h3>
+              <p class="watch-card-desc">قاب بالشتکی دست‌ساز طلای زرد با مقیاس سرعت‌سنج تاکیمتر، عقربه‌های استیل آب‌دیده آبی بلود و شناسنامه تاریخی.</p>
+              <div class="watch-card-specs-grid">
+                <div class="watch-card-spec-item">
+                  <span>ابعاد / جنس قاب:</span>
+                  <span>۴۱mm • طلای ۱۸ عیار زرد</span>
+                </div>
+                <div class="watch-card-spec-item">
+                  <span>نوع موتور / آب:</span>
+                  <span>کوک دستی کرونوگراف • 30M</span>
+                </div>
+              </div>
+            </div>
+            <div class="watch-card-footer">
+              <div class="watch-card-price">$21,600</div>
+              <a href="https://wa.me/qr/3DDS2KO3LDMOC1" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" data-whatsapp-inquiry="کرونوگراف کوسن وینتیج طلایی">
+                سفارش این محصول
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 10. Forged Carbon Green Emerald Tourbillon (IMAGE_32) -->
+        <article class="watch-card product-grid-card" data-category="tourbillon skeleton" data-price="34000">
+          <div class="watch-card-image-wrap">
+            <span class="watch-card-badge" style="background: #059669; color: #FFFFFF;">کربن فورجد زمردی</span>
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0py5B2OCa4SwiJZZ_ZcNVpL5ZVqxhDh34VGs-q8zVkqy8WTr3MaIQA0j-u4SjN5kICAE6tQcxw4tVY3prNjgHDpfgdUz5-KaNCWHQ_eN7sE_PUNQldpyAbZSk4wsI4sVNb-7bv4efN8aXAwKiUU9eWCrybpfwOh7XqZ4ipHh-gnlkh1G93KpLFG7_PfIh0sJv7D4wFE1TAjI0-Fn9e3grBNHN85AbXuHilfzfyIC2KQu1nDKE2wrbcg" alt="فورجد کربن توربیون اسپرت زمردی" class="watch-card-img" loading="lazy">
+          </div>
+          <div class="watch-card-info">
+            <div>
+              <div class="watch-card-meta-top">
+                <span>وزن کل تنها ۶۸ گرم</span>
+                <span style="font-family: 'Cinzel', serif; color: var(--color-champagne-gold);">Calibre TK-Carbon</span>
+              </div>
+              <h3 class="watch-card-title">فورجد کربن توربیون زمردی</h3>
+              <p class="watch-card-desc">قاب تونو سبک از فیبر کربن فشرده، نگین‌های زمرد باگت طبیعی روی بزل و اسکلتون با بند رابر ضدحساسیت FKM.</p>
+              <div class="watch-card-specs-grid">
+                <div class="watch-card-spec-item">
+                  <span>شکل / جنس قاب:</span>
+                  <span>تونو ۴۲mm • کربن فورجد</span>
+                </div>
+                <div class="watch-card-spec-item">
+                  <span>نوع موتور / آب:</span>
+                  <span>توربیون اسکلتون دستی • 50M</span>
+                </div>
+              </div>
+            </div>
+            <div class="watch-card-footer">
+              <div class="watch-card-price">$34,000</div>
+              <a href="https://wa.me/qr/3DDS2KO3LDMOC1" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" data-whatsapp-inquiry="فورجد کربن توربیون زمردی">
+                دریافت مشاوره
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 11. Minimalist Steel Swiss Automatic (IMAGE_19) -->
+        <article class="watch-card product-grid-card" data-category="classic" data-price="16800">
+          <div class="watch-card-image-wrap">
+            <span class="watch-card-badge">استیل مینیمال سوئیس</span>
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjylcmt_jv5qEp0B_tdJ7ToXJ0q_MyohEkzK6L3A8PesurrRff7nOxjs45tRAGB-Jzy5ryZYStb1C7XpLapCzmjfc891gzg1iBH9fRVPn_bd07lL8-d3OKa0CW1pV0MYXWjjR0_bhPTcVyg6Z2C1vFKSdoeYll1LZOhXQIlKK_tR3Y6qLGH-lCrKdHDyvqBJKyA_cGdm3e8PxM7zOwbkiZvt34JPZEhcnrXduD1sdz1dSdZiJN-C6i_KWw2qAF7NH-dvM" alt="کالیبر اتوماتیک مینیمال استیل" class="watch-card-img" loading="lazy">
+          </div>
+          <div class="watch-card-info">
+            <div>
+              <div class="watch-card-meta-top">
+                <span>صفحه سن‌برست خورشیدی</span>
+                <span style="font-family: 'Cinzel', serif; color: var(--color-champagne-gold);">Calibre Minimal</span>
+              </div>
+              <h3 class="watch-card-title">کالیبر اتوماتیک مینیمال استیل</h3>
+              <p class="watch-card-desc">ایندکس‌های جلاخورده الماسی، عقربه ثانیه‌شمار قرمز پرسرعت و روتور سنگین از تنگستن با بلبرینگ سرامیکی.</p>
+              <div class="watch-card-specs-grid">
+                <div class="watch-card-spec-item">
+                  <span>قطر / جنس قاب:</span>
+                  <span>۳۹.۵mm • استیل ۹۰۴L</span>
+                </div>
+                <div class="watch-card-spec-item">
+                  <span>نوع موتور / آب:</span>
+                  <span>اتوماتیک کالیبر TK • 100M</span>
+                </div>
+              </div>
+            </div>
+            <div class="watch-card-footer">
+              <div class="watch-card-price">$16,800</div>
+              <a href="https://wa.me/qr/3DDS2KO3LDMOC1" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" data-whatsapp-inquiry="کالیبر اتوماتیک مینیمال استیل">
+                استعلام موجودی
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 12. Master Chrono Edition Smokey Steel (IMAGE_27) -->
+        <article class="watch-card product-grid-card" data-category="chronograph aviation" data-price="19500">
+          <div class="watch-card-image-wrap">
+            <span class="watch-card-badge">نسخه ویژه استادکار</span>
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy8RazKbkxNest5J9jhG5NJGKOGjcGTBWvw7cHIKVmDji_GHmUbX9dZRlvEHD2FOfYYAGEdUDpWtaJQ87pzDRcJqn5xNy5WZmoSZmHW-wUE1xlu-C-I4KQ6spYua1Z1wjTO3sDmvonUYEIaCEH8bh8BeDBDZGaXOevBuIzE-Vof_ak5wnr5r-wZq5KVMmTzW4KCpAgXQVq3bFd29aGTRtgAwyBMwvbrB1wGJZeWaO7ne6xBUKk8tebkEwTeTOqSVywh4I" alt="مستر کرونو ادیشن دودی کلاسیک" class="watch-card-img" loading="lazy">
+          </div>
+          <div class="watch-card-info">
+            <div>
+              <div class="watch-card-meta-top">
+                <span>دو زمانه GMT ژنو</span>
+                <span style="font-family: 'Cinzel', serif; color: var(--color-champagne-gold);">Calibre Master GMT</span>
+              </div>
+              <h3 class="watch-card-title">مستر کرونو ادیشن دودی کلاسیک</h3>
+              <p class="watch-card-desc">ترکیب استیل براق و صفحه فومی مشکی زغالی با عقربه‌های متقاطع و نمایش زمان دوم GMT ویژه پروازهای بین‌المللی.</p>
+              <div class="watch-card-specs-grid">
+                <div class="watch-card-spec-item">
+                  <span>قطر / جنس قاب:</span>
+                  <span>۴۱.۵mm • استیل ۹۰۴L</span>
+                </div>
+                <div class="watch-card-spec-item">
+                  <span>نوع موتور / آب:</span>
+                  <span>اتوماتیک کرونوگراف GMT • 100M</span>
+                </div>
+              </div>
+            </div>
+            <div class="watch-card-footer">
+              <div class="watch-card-price">$19,500</div>
+              <a href="https://wa.me/qr/3DDS2KO3LDMOC1" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" data-whatsapp-inquiry="مستر کرونو ادیشن دودی کلاسیک">
+                سفارش این محصول
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Bespoke Commission Callout -->
+      <div class="glass-panel-gold" style="margin-top: 5rem; padding: 3rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 2rem;">
+        <div style="max-width: 680px;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+            <span style="width: 20px; height: 1px; background: var(--color-champagne-gold);"></span>
+            <span style="font-family: 'Cinzel', serif; font-size: 0.75rem; letter-spacing: 0.2em; color: var(--color-champagne-gold); font-weight: 700;">
+              BESPOKE HOROLOGY COMMISSIONS
+            </span>
+          </div>
+          <h3 style="font-size: 1.625rem; font-weight: 800; color: #FAF9F6; margin-bottom: 0.5rem;">
+            سفارش قطعات تک‌نسخه و شخصی‌سازی‌شده
+          </h3>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.8; margin: 0;">
+            امکان سفارشی‌سازی کامل تمام اجزای ساعت شامل حک نشان یا امضای خانوادگی روی روتور طلای ۲۲ عیار، انتخاب رنگ میناکاری کادران، تنظیم ارگونومیک قطر بند و تحویل توسط نمایندگان رسمی ژنو.
+          </p>
+        </div>
+        <div>
+          <a href="https://wa.me/qr/3DDS2KO3LDMOC1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            مشاوره ساخت ساعت سفارشی
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="assets/logo/logo.svg" alt="TAVAKOLI WATCH GALLERY" class="footer-brand-crest">
+          <p style="font-size: 0.8125rem; line-height: 1.8; color: var(--text-secondary); max-width: 340px; margin-bottom: 1.5rem;">
+            گالری ساعت توکلی؛ نماد تجمل در سکوت، دقت میکرومکانیک و مهندسی اصیل سوئیسی.
+          </p>
+          <div style="font-family: 'Cinzel', serif; font-size: 0.75rem; color: var(--color-champagne-gold); letter-spacing: 0.15em;">
+            TIME, REFINED.
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">ناوبری گالری</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html">صفحه اصلی</a></li>
+            <li><a href="products.html">فروشگاه ساعت‌ها</a></li>
+            <li><a href="about.html">درباره ما و اصالت</a></li>
+            <li><a href="blog.html">مجله تخصصی</a></li>
+            <li><a href="contact.html">تماس و سالن‌ها</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">خدمات و اصالت</h4>
+          <ul class="footer-nav-list">
+            <li><a href="products.html">استعلام موجودی کالیبرها</a></li>
+            <li><a href="about.html">نشان کیفیت ژنو (Poinçon)</a></li>
+            <li><a href="contact.html">رزرو وقت ملاقات VIP</a></li>
+            <li><a href="https://wa.me/qr/3DDS2KO3LDMOC1" target="_blank" rel="noopener noreferrer">مشاوره در واتساپ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">سالن‌های حضوری</h4>
+          <p style="font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem;">
+            <strong style="color: #FAF9F6; display: block;">سالن مرکزی ایران:</strong>
+            اصفهان، نجف‌آباد، میدان باغ ملی، سالن اختصاصی توکلی
+          </p>
+          <p style="font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem;">
+            <strong style="color: #FAF9F6; display: block;">دفتر مرکزی ژنو:</strong>
+            Rue du Rhône 42, 1204 Genève, Suisse
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          © ۲۰۲۶ تمامی حقوق مادی و معنوی برای برند رسمی <strong>TAVAKOLI</strong> محفوظ است.
+        </div>
+        <div style="display: flex; gap: 1.5rem; font-family: 'Cinzel', serif; letter-spacing: 0.1em;">
+          <span>SWISS PRECISION</span>
+          <span>•</span>
+          <span>HAUTE HORLOGERIE</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp (Ultra-Luxury Horological Capsule) -->
+  <a href="https://wa.me/qr/3DDS2KO3LDMOC1" target="_blank" rel="noopener noreferrer" class="whatsapp-floating" aria-label="مشاوره مستقیم در واتساپ" title="مشاوره اختصاصی در واتساپ">
+    <div class="whatsapp-text-group">
+      <span class="whatsapp-primary-text">مشاوره و استعلام در واتساپ</span>
+      <span class="whatsapp-sub-status">
+        <span class="whatsapp-live-dot"></span>
+        پاسخ‌گویی آنی VIP
+      </span>
+    </div>
+    <div class="whatsapp-icon-orb">
+      <div class="whatsapp-pulse-ring"></div>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zM12.05 3.67c4.54 0 8.24 3.7 8.24 8.24 0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24zm4.52 11.66c-.25-.12-1.47-.72-1.7-.8-.23-.09-.39-.12-.56.12-.17.25-.65.8-.8 1-.15.15-.3.17-.55.05-.25-.12-1.05-.39-2-1.24-.74-.66-1.24-1.47-1.39-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.32-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.16 0-.43.06-.66.31-.22.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.57.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.53.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.3z"/>
+      </svg>
+    </div>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

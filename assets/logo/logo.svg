@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Luxury Champagne Gold Gradient -->
+    <linearGradient id="tavakoliGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8D39E" />
+      <stop offset="28%" stop-color="#D4B47A" />
+      <stop offset="55%" stop-color="#C6A46A" />
+      <stop offset="80%" stop-color="#AA843F" />
+      <stop offset="100%" stop-color="#C6A46A" />
+    </linearGradient>
+    <linearGradient id="tavakoliGoldLight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C6A46A" stop-opacity="0.2" />
+      <stop offset="50%" stop-color="#E8D39E" stop-opacity="1" />
+      <stop offset="100%" stop-color="#C6A46A" stop-opacity="0.2" />
+    </linearGradient>
+    <filter id="subtleGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Emblem: The Iconic Horological 'T' with Watch Hand -->
+  <g transform="translate(400, 85)" text-anchor="middle" filter="url(#subtleGlow)">
+    <!-- Main Serif 'T' Silhouette -->
+    <path d="
+      M -42 -55
+      L 42 -55
+      C 42 -55, 42 -40, 40 -38
+      C 37 -36, 32 -38, 26 -38
+      L 8 -38
+      L 8 30
+      C 16 30, 24 28, 27 31
+      C 29 33, 29 45, 29 45
+      L -29 45
+      C -29 45, -29 33, -27 31
+      C -24 28, -16 30, -8 30
+      L -8 -38
+      L -26 -38
+      C -32 -38, -37 -36, -40 -38
+      C -42 -40, -42 -55, -42 -55
+      Z
+    " fill="url(#tavakoliGold)" />
+
+    <!-- Horological Watch Hand pointing to 2 o'clock -->
+    <!-- Pinion center ring -->
+    <circle cx="-13" cy="-3" r="6" fill="#0B0B0A" stroke="url(#tavakoliGold)" stroke-width="2.5" />
+    <circle cx="-13" cy="-3" r="2.2" fill="url(#tavakoliGold)" />
+    <!-- Tapered Breguet/Dauphine watch hand arrow pointing diagonally up-right -->
+    <path d="
+      M -10 -4
+      L 28 -42
+      L 29 -40
+      L -6 0
+      Z
+    " fill="url(#tavakoliGold)" stroke="url(#tavakoliGold)" stroke-width="0.5" />
+  </g>
+
+  <!-- Brand Typography: T A V A K O L I -->
+  <text x="400" y="222"
+        text-anchor="middle"
+        font-family="'Cinzel', 'Playfair Display', 'Didot', 'Bodoni MT', serif"
+        font-size="44"
+        font-weight="500"
+        letter-spacing="18"
+        fill="url(#tavakoliGold)">
+    TAVAKOLI
+  </text>
+
+  <!-- Sub-label: WATCH GALLERY with flanking rules -->
+  <g transform="translate(400, 268)">
+    <!-- Left Rule -->
+    <line x1="-240" y1="-5" x2="-130" y2="-5" stroke="url(#tavakoliGold)" stroke-width="1" stroke-opacity="0.8" />
+    <circle cx="-125" cy="-5" r="1.5" fill="url(#tavakoliGold)" />
+
+    <!-- Category Label -->
+    <text x="0" y="0"
+          text-anchor="middle"
+          font-family="'Cinzel', 'Montserrat', sans-serif"
+          font-size="13"
+          font-weight="600"
+          letter-spacing="9"
+          fill="url(#tavakoliGold)"
+          opacity="0.95">
+      WATCH GALLERY
+    </text>
+
+    <!-- Right Rule -->
+    <circle cx="125" cy="-5" r="1.5" fill="url(#tavakoliGold)" />
+    <line x1="130" y1="-5" x2="240" y2="-5" stroke="url(#tavakoliGold)" stroke-width="1" stroke-opacity="0.8" />
+  </g>
+</svg>
