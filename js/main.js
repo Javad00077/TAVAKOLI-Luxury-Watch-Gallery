@@ -19,6 +19,7 @@
     initProductFilters();
     initFloatingWhatsApp();
     initForms();
+    initCardClickToProduct();
   });
 
   /* ==========================================================================
@@ -135,7 +136,7 @@
   }
 
   /* ==========================================================================
-     3. Cinematic Hero Video Scrubbing & Fallback
+     3. Cinematic Hero Video Scrubbing (Silky Smooth, Slow Motion, Lag-Free)
      ========================================================================== */
   function initHeroVideoScrub() {
     const heroWrapper = document.querySelector('.hero-scroll-wrapper');
@@ -150,11 +151,16 @@
 
     let isUserPlaying = false;
     let targetTime = 0;
+    let currentRenderTime = 0;
     let isSeeking = false;
-    let seekQueued = false;
+    let lastSeekTimestamp = 0;
+    let rafId = null;
 
     // Ensure video maintains 100% crisp opacity at all times
     video.style.opacity = '1';
+    video.muted = true;
+    video.playsInline = true;
+    video.playbackRate = 0.75; // Luxurious slow motion for playback
 
     function markVideoReady() {
       if (video.duration && isFinite(video.duration) && video.duration > 0) {
@@ -166,15 +172,12 @@
           const triggers = ScrollTrigger.getAll();
           const st = triggers.find(t => t.trigger === heroWrapper);
           if (st) {
-            targetTime = st.progress * (video.duration - 0.04);
-            applySeek();
+            targetTime = st.progress * Math.max(0, video.duration - 0.05);
+            currentRenderTime = targetTime;
           }
         }
       }
     }
-
-    video.muted = true;
-    video.playsInline = true;
 
     video.addEventListener('loadedmetadata', markVideoReady);
     video.addEventListener('loadeddata', markVideoReady);
@@ -189,47 +192,45 @@
       } catch (e) {}
     }
 
-    // High performance seek dispatcher
-    function applySeek() {
-      if (!video || !video.duration || isUserPlaying) return;
+    // High performance smooth lerp loop (eliminates decoder traffic jams and stutter)
+    function startSmoothScrubLoop() {
+      if (rafId) cancelAnimationFrame(rafId);
 
-      if (isSeeking) {
-        seekQueued = true;
-        return;
-      }
-
-      const maxTime = Math.max(0, video.duration - 0.04);
-      const safeTime = Math.min(Math.max(targetTime, 0.001), maxTime);
-
-      if (Math.abs(video.currentTime - safeTime) > 0.012) {
-        isSeeking = true;
-        try {
-          if (typeof video.fastSeek === 'function') {
-            video.fastSeek(safeTime);
+      function loop() {
+        if (!isUserPlaying && video.duration && isFinite(video.duration)) {
+          // Butter-smooth, slow-motion lerp towards targetTime
+          const delta = targetTime - currentRenderTime;
+          if (Math.abs(delta) > 0.002) {
+            // Soft slow-motion dampening: 0.065 delivers silky gradual transitions
+            currentRenderTime += delta * 0.065;
           } else {
-            video.currentTime = safeTime;
+            currentRenderTime = targetTime;
           }
-        } catch (err) {
-          isSeeking = false;
+
+          const now = performance.now();
+          // Seek only if video decoder has finished previous frame AND at least 32ms interval (~30fps)
+          if (!video.seeking && !isSeeking && (now - lastSeekTimestamp > 32)) {
+            const timeDiff = Math.abs(video.currentTime - currentRenderTime);
+            if (timeDiff > 0.02) {
+              isSeeking = true;
+              lastSeekTimestamp = now;
+              const safeTime = Math.min(Math.max(currentRenderTime, 0.001), Math.max(0, video.duration - 0.05));
+              video.currentTime = safeTime;
+            }
+          }
         }
+
+        rafId = requestAnimationFrame(loop);
       }
+
+      rafId = requestAnimationFrame(loop);
     }
+
+    startSmoothScrubLoop();
 
     video.addEventListener('seeked', () => {
       isSeeking = false;
-      if (seekQueued && !isUserPlaying) {
-        seekQueued = false;
-        applySeek();
-      }
     });
-
-    // Safety watchdog: recover immediately if browser drops or delays seeked event
-    setInterval(() => {
-      if (isSeeking && Math.abs(video.currentTime - targetTime) > 0.02) {
-        isSeeking = false;
-        applySeek();
-      }
-    }, 45);
 
     // Pause autonomous play when user scrolls with mouse wheel
     heroWrapper.addEventListener('wheel', () => {
@@ -246,6 +247,7 @@
     if (playToggleBtn) {
       playToggleBtn.addEventListener('click', () => {
         if (video.paused) {
+          video.playbackRate = 0.75;
           video.play().then(() => {
             isUserPlaying = true;
             playToggleBtn.innerHTML = '<span class="material-symbols-outlined" style="font-size: 18px;">pause</span>';
@@ -253,6 +255,8 @@
         } else {
           video.pause();
           isUserPlaying = false;
+          currentRenderTime = video.currentTime;
+          targetTime = video.currentTime;
           playToggleBtn.innerHTML = '<span class="material-symbols-outlined" style="font-size: 18px;">play_arrow</span>';
         }
       });
@@ -268,7 +272,7 @@
       });
     }
 
-    // GSAP ScrollTrigger Integration
+    // GSAP ScrollTrigger Integration with Relaxed, Slow-Motion Scrub (1.8s momentum)
     if (window.gsap && window.ScrollTrigger) {
       gsap.registerPlugin(ScrollTrigger);
 
@@ -279,7 +283,7 @@
         end: 'bottom bottom',
         pin: heroStage,
         pinSpacing: false,
-        scrub: 0.5, // Buttery smooth momentum without lag
+        scrub: 1.8, // Luxurious, slow-motion inertia without abrupt stops or lag
         onUpdate: (self) => {
           const progress = self.progress; // 0 to 1
 
@@ -297,10 +301,9 @@
             progressBar.style.width = (progress * 100).toFixed(1) + '%';
           }
 
-          // Scrub video currentTime smoothly with mouse scroll
+          // Update target time for smooth render loop
           if (video.duration && isFinite(video.duration)) {
-            targetTime = progress * (video.duration - 0.04);
-            applySeek();
+            targetTime = progress * Math.max(0, video.duration - 0.05);
           }
 
           // Video stays 100% full crisp resolution
@@ -308,21 +311,14 @@
 
           // Activate sequential step panels
           if (stepPanels.length > 0) {
-            if (progress < 0.33) {
+            if (progress < 0.32) {
               activatePanel(0);
-            } else if (progress < 0.68) {
+            } else if (progress < 0.66) {
               activatePanel(1);
             } else {
               activatePanel(2);
             }
           }
-        }
-      });
-
-      // Ticker to ensure constant silky-smooth frame synchronization
-      gsap.ticker.add(() => {
-        if (!isUserPlaying && video.duration && Math.abs(video.currentTime - targetTime) > 0.02) {
-          applySeek();
         }
       });
 
@@ -351,16 +347,15 @@
           }
 
           if (video.duration && isFinite(video.duration)) {
-            targetTime = progress * (video.duration - 0.04);
-            applySeek();
+            targetTime = progress * Math.max(0, video.duration - 0.05);
           }
 
           video.style.opacity = '1';
 
           if (stepPanels.length > 0) {
-            if (progress < 0.33) {
+            if (progress < 0.32) {
               activatePanel(0);
-            } else if (progress < 0.68) {
+            } else if (progress < 0.66) {
               activatePanel(1);
             } else {
               activatePanel(2);
@@ -602,6 +597,64 @@
       toast.style.opacity = '0';
       toast.style.transform = 'translateY(20px)';
     }, 5500);
+  }
+
+  /* ==========================================================================
+     9. Product Cards -> Dedicated Product Detail Pages
+     ========================================================================== */
+  function initCardClickToProduct() {
+    // Only run on pages that have watch cards and aren't already product.html
+    if (window.location.pathname.endsWith('product.html')) return;
+
+    const cards = document.querySelectorAll('.watch-card');
+    cards.forEach(card => {
+      const titleEl = card.querySelector('.watch-card-title');
+      const imgWrap = card.querySelector('.watch-card-image-wrap');
+      const footer = card.querySelector('.watch-card-footer');
+
+      const titleText = titleEl ? titleEl.textContent : '';
+      let targetId = 'chronograph-black';
+
+      if (titleText.includes('تیتانیوم') || titleText.includes('سیاه')) targetId = 'chronograph-black';
+      else if (titleText.includes('هریتیج') || titleText.includes('۱۹۲۸')) targetId = 'heritage-1928';
+      else if (titleText.includes('توربیون') && titleText.includes('رزگلد')) targetId = 'flying-tourbillon';
+      else if (titleText.includes('اسکلتون')) targetId = 'ultra-thin-skeleton';
+      else if (titleText.includes('ناوی‌تایمر') || titleText.includes('اویتور')) targetId = 'aviator-navitimer';
+      else if (titleText.includes('منهتن') || titleText.includes('دایور')) targetId = 'manhattan-diver';
+      else if (titleText.includes('تایگر')) targetId = 'chrono-tiger';
+      else if (titleText.includes('استرونومیا') || titleText.includes('دائمی')) targetId = 'astronomia-moonphase';
+      else if (titleText.includes('کربن') || titleText.includes('زمرد')) targetId = 'forged-carbon-emerald';
+
+      const targetUrl = `product.html?id=${targetId}`;
+
+      // Make image wrap clickable
+      if (imgWrap && !imgWrap.closest('a')) {
+        imgWrap.style.cursor = 'pointer';
+        imgWrap.setAttribute('title', 'مشاهده صفحه اختصاصی و مشخصات کامل');
+        imgWrap.addEventListener('click', (e) => {
+          if (!e.target.closest('a')) {
+            window.location.href = targetUrl;
+          }
+        });
+      }
+
+      // Make title clickable
+      if (titleEl && !titleEl.querySelector('a')) {
+        const origHtml = titleEl.innerHTML;
+        titleEl.innerHTML = `<a href="${targetUrl}" style="color: inherit; text-decoration: none; transition: color 0.2s ease;" class="hover-gold">${origHtml}</a>`;
+      }
+
+      // Add a clean "مشاهده جزئیات" link if missing
+      if (footer && !footer.querySelector('.btn-view-details')) {
+        const detailsBtn = document.createElement('a');
+        detailsBtn.href = targetUrl;
+        detailsBtn.className = 'btn btn-outline btn-sm btn-view-details';
+        detailsBtn.style.padding = '0.35rem 0.65rem';
+        detailsBtn.style.fontSize = '0.75rem';
+        detailsBtn.textContent = 'مشاهده جزئیات';
+        footer.insertBefore(detailsBtn, footer.lastElementChild);
+      }
+    });
   }
 
 })();
