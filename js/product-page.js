@@ -62,8 +62,7 @@
     // WhatsApp Action Link
     const waBtn = document.getElementById('product-hero-whatsapp-btn');
     if (waBtn) {
-      const msg = encodeURIComponent(`درود و احترام، جهت دریافت اطلاعات تخصصی، بررسی موجودی و هماهنگی سفارش ساعت «${p.title}» (${p.ref}) در گالری ساعت توکلی پیام می‌دهم.`);
-      waBtn.href = `https://wa.me/qr/3DDS2KO3LDMOC1?text=${msg}`;
+      waBtn.href = 'https://wa.me/qr/3DDS2KO3LDMOC1';
     }
 
     // Main Featured Image
@@ -255,9 +254,9 @@
               <p>کارشناسان ارشد گالری توکلی در تمام روزهای هفته آماده پاسخگویی به سوالات فنی و هماهنگی زمان بازدید شما هستند.</p>
             </div>
             <div class="order-cta-btns">
-              <a href="https://wa.me/qr/3DDS2KO3LDMOC1?text=${encodeURIComponent(`درود، جهت هماهنگی خرید و مشاوره تخصصی ساعت «${p.title}» پیام می‌دهم.`)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <a href="https://wa.me/qr/3DDS2KO3LDMOC1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                 <span class="material-symbols-outlined" style="font-size: 18px;">chat</span>
-                سفارش فوری در واتساپ
+                سفارش و مشاوره فوری در واتساپ
               </a>
               <a href="tel:09121966276" class="btn btn-outline">
                 <span class="material-symbols-outlined" style="font-size: 18px;">call</span>

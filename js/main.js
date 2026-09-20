@@ -563,13 +563,14 @@
      6. Floating WhatsApp Button & WhatsApp Handlers
      ========================================================================== */
   function initFloatingWhatsApp() {
-    // Dynamic WhatsApp CTAs with customized message
+    // Direct WhatsApp consultation CTAs to official link
     document.querySelectorAll('[data-whatsapp-inquiry]').forEach(btn => {
+      btn.setAttribute('href', WHATSAPP_URL);
+      btn.setAttribute('target', '_blank');
+      btn.setAttribute('rel', 'noopener noreferrer');
       btn.addEventListener('click', (e) => {
         e.preventDefault();
-        const modelName = btn.getAttribute('data-whatsapp-inquiry') || 'یکی از ساعت‌های فاخر';
-        const msg = encodeURIComponent(`درود بر گالری ساعت توکلی (TAVAKKOL).\nمایل به دریافت مشاوره، استعلام موجودی و هماهنگی پیرامون ساعت «${modelName}» هستم.`);
-        window.open(`${WHATSAPP_URL}?text=${msg}`, '_blank');
+        window.open(WHATSAPP_URL, '_blank');
       });
     });
   }
